@@ -75,7 +75,7 @@ impl SslExpiration {
                            cert.not_after().as_ptr());
         }
 
-        Ok(SslExpiration(pday * 24 * 60 * 60 - psec))
+        Ok(SslExpiration(pday * 24 * 60 * 60 + psec))
     }
 
     /// How many seconds until SSL certificate expires.
